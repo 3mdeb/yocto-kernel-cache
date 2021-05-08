@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: MIT
 define KMACHINE qemuppc64
+define KMACHINE qemuppc64le
+define KMACHINE qemuppc64el
 define KTYPE standard
 define KARCH powerpc
 
@@ -16,6 +18,7 @@ include features/scsi/cdrom.scc
 include cfg/virtio.scc
 
 include qemu-ppc64.scc
+kconf hardware qemu-ppc64-le.cfg
 
 # default policy for standard kernels
 include features/latencytop/latencytop.scc
